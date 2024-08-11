@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+
+
+ <center> 
+    <div class="add"><input type="text" id="ADDING"><button onclick="a()" id="bt">ADD</button></div>
+    <div class="main">
+    <h1>TO DO LIST</h1>  <br><br><br><br>
+    <input type="text" id="one"> <button  class="D">DONE</button><br>
+    <br><br><br>
+    <input type="text" id="two"> <button class="D">DONE</button><br>
+    <br> <br> <br>
+    <input type="text" id="three"> <button class="D">DONE</button><br>
+    <br> <br> <br>
+    <input type="text" id="four">  <button class="D">DONE</button><br>
+    <br> <br> <br>
+    <input type="text" id="five">  <button class="D">DONE</button><br>
+    <br> <br> <br>
+    <script>
+        document.querySelectorAll("button.D").forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.add('clicked');
+            });
+        });
+
+        function a() {
+            const data = document.getElementById("ADDING").value;
+            if (data === '') {
+                alert("Please enter a task.");
+                return;
+            }
+
+            const boxes = [
+                document.getElementById('one'),
+                document.getElementById('two'),
+                document.getElementById('three'),
+                document.getElementById('four'),
+                document.getElementById('five')
+            ];
+
+            for (let i = 0; i < boxes.length; i++) {
+                if (boxes[i].value === '') {
+                    boxes[i].value = data;
+                    document.getElementById("ADDING").value = ''; // Clear input field
+                    break; // Exit loop after adding the task
+                }
+            }
+        }
+    </script>
+</div></center>
+</body>
+</html>

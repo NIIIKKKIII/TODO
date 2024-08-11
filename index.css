@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: beige;
+}
+.main{
+    width: 400px;
+    height: 550px;
+    background-color: rgb(59, 207, 209);
+    position: relative;
+    top:150px;
+    border: solid 3px black;
+    border-radius: 15px;
+
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    border: solid  1px rgb(24, 24, 24);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.add{
+ position: relative;
+ top: 100px;
+}
+
+#ADDING{
+    position: relative;
+    left: 28px;
+}
+
+
+#bt{
+    position: relative;
+    left: 20px;
+    border-radius: 100px;
+    border: solid 2px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(179, 231, 102);
+    cursor: pointer;
+}
+
+.D{
+    width: 60px;
+    height: 30px;
+    border: solid 0.5px rgb(13, 12, 12);
+    background-color: rgb(193, 87, 87);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+button.D.clicked{
+    background-color: green;
+}
+
